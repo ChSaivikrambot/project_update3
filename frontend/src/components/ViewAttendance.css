@@ -1,0 +1,45 @@
+.view-attendance {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .view-attendance h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .filters select, .filters button {
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+  
+  .csv-btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  

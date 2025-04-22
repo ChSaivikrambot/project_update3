@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Attendance Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .connection {
+            position: absolute;
+            background-color: #333;
+            z-index: -1;
+        }
+        .vertical-line {
+            width: 2px;
+        }
+        .horizontal-line {
+            height: 2px;
+        }
+        .dashed-connection {
+            border-right: 2px dashed #333;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen py-8">
+    <div class="container mx-auto px-4 relative">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="bg-blue-700 text-white text-2xl font-bold py-6 px-8 rounded-lg inline-block mb-8">
+                College Attendance Management System
+            </div>
+            
+            <div class="flex flex-col items-center mb-10">
+                <div class="bg-gray-800 text-white py-4 px-10 rounded-md mb-8">
+                    START
+                </div>
+                
+                <div class="bg-blue-400 text-white py-3 px-8 rounded-md mb-10">
+                    Home Page
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <div class="relative mb-16">
+            <div class="horizontal-line connection left-0 right-0 top-8"></div>
+            
+            <div class="flex justify-between mb-16">
+                <div class="bg-blue-300 py-4 px-8 rounded-md">
+                    Features
+                </div>
+                <div class="bg-blue-300 py-4 px-8 rounded-md">
+                    How It Works
+                </div>
+                <div class="bg-blue-300 py-4 px-8 rounded-md">
+                    About
+                </div>
+                <div class="bg-blue-300 py-4 px-8 rounded-md">
+                    Contact Us
+                </div>
+                <div class="bg-green-400 py-4 px-8 rounded-md">
+                    User Selection Page
+                </div>
+            </div>
+            
+            <!-- Second horizontal line -->
+            <div class="horizontal-line connection left-0 right-0 top-32"></div>
+        </div>
+        
+        <!-- User Types -->
+        <div class="flex justify-center space-x-20 mb-12 relative">
+            <div class="bg-red-400 text-white py-4 px-8 rounded-md">
+                Teacher
+            </div>
+            <div class="bg-green-500 text-white py-4 px-8 rounded-md">
+                Student
+            </div>
+            <div class="bg-purple-400 text-white py-4 px-8 rounded-md">
+                Admin
+            </div>
+            
+            <!-- Vertical connections -->
+            <div class="vertical-line connection left-1/4 top-16 h-14"></div>
+            <div class="vertical-line connection left-1/2 top-16 h-14"></div>
+            <div class="vertical-line connection left-3/4 top-16 h-14"></div>
+        </div>
+        
+        <!-- Login Sections -->
+        <div class="flex justify-center space-x-20 mb-12 relative">
+            <div class="bg-blue-500 text-white py-4 px-8 rounded-md">
+                Login / Signup
+            </div>
+            <div class="bg-blue-500 text-white py-4 px-8 rounded-md">
+                Login / Signup
+            </div>
+            <div class="bg-purple-500 text-white py-4 px-8 rounded-md">
+                Admin Login
+            </div>
+            
+            <!-- Vertical connections -->
+            <div class="vertical-line connection left-1/4 top-16 h-14"></div>
+            <div class="vertical-line connection left-1/2 top-16 h-14"></div>
+            <div class="vertical-line connection left-3/4 top-16 h-14"></div>
+        </div>
+        
+        <!-- Validation Sections -->
+        <div class="flex justify-center space-x-20 mb-12 relative">
+            <div class="bg-blue-500 text-white py-4 px-8 rounded-md">
+                Validate with DB
+            </div>
+            <div class="bg-blue-500 text-white py-4 px-8 rounded-md">
+                Validate with DB
+            </div>
+            <div class="bg-purple-500 text-white py-4 px-8 rounded-md">
+                Admin Dashboard
+            </div>
+            
+            <!-- Vertical connections -->
+            <div class="vertical-line connection left-1/4 top-16 h-14"></div>
+            <div class="vertical-line connection left-1/2 top-16 h-14"></div>
+            <div class="dashed-connection left-3/4 top-16 h-56 w-72"></div>
+        </div>
+        
+        <!-- Validation Results -->
+        <div class="flex justify-center space-x-20 mb-12 relative">
+            <div class="flex space-x-6">
+                <div class="bg-green-500 text-white py-3 px-6 rounded-md">
+                    If Valid
+                </div>
+                <div class="bg-red-500 text-white py-3 px-6 rounded-md">
+                    If Invalid
+                </div>
+            </div>
+            <div class="bg-green-500 text-white py-3 px-6 rounded-md">
+                If Valid
+            </div>
+            <div class="bg-red-500 text-white py-3 px-6 rounded-md">
+                If Invalid
+            </div>
+            
+            <!-- Vertical connections -->
+            <div class="vertical-line connection left-1/4 top-16 h-14"></div>
+            <div class="vertical-line connection left-1/2 top-16 h-14"></div>
+            <div class="vertical-line connection left-3/4 top-16 h-14"></div>
+        </div>
+        
+        <!-- Dashboards -->
+        <div class="flex justify-center space-x-20 mb-20 relative">
+            <div class="bg-green-500 text-white py-3 px-6 rounded-md">
+                Student Dashboard
+            </div>
+            <div class="bg-orange-500 text-white py-3 px-6 rounded-md">
+                Teacher Dashboard
+            </div>
+            <div class="bg-red-500 text-white py-3 px-6 rounded-md">
+                Error
+            </div>
+            
+            <!-- Dashed connections -->
+            <div class="dashed-connection left-1/4 top-16 h-56"></div>
+            <div class="dashed-connection left-1/2 top-16 h-40 w-40"></div>
+        </div>
+        
+        <!-- Dashboard Details -->
+        <div class="flex justify-center space-x-12">
+            <div class="bg-green-500 text-white p-8 rounded-md w-96">
+                <h2 class="text-xl font-bold mb-6">STUDENT DASHBOARD</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Student Profile (From 'students')</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Attendance Overview (From 'records')</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Last 7 Days Records (From 'records')</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Timetable (From 'timetable')</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Results (Future Scope)</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-red-500 text-white p-8 rounded-md w-96">
+                <h2 class="text-xl font-bold mb-6">TEACHER DASHBOARD</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Teacher Profile (From 'teachers')</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Mark Attendance
+                            <ul class="pl-8 pt-4 space-y-4">
+                                <li>- Select: Dept, Section, Period, Date</li>
+                                <li>- Mark: ✓ / ✗ / O for each student</li>
+                                <li>- Submit / Save Edit / Clear</li>
+                                <li>- Save to: 'records' and 'attendance'</li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>View Timetable (From 'timetable')</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Request Substitute Class (To Admin)</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-purple-500 text-white p-8 rounded-md w-96">
+                <h2 class="text-xl font-bold mb-6">ADMIN PANEL ACTIONS</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Receive Notifications:
+                            <ul class="pl-8 pt-4 space-y-4">
+                                <li>- Late Attendance</li>
+                                <li>- Sub Requests</li>
+                                <li>- Unmarked Classes</li>
+                                <li>- Password Reset Requests</li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Assign Substitute Teachers</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Access All Dashboard Data</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Manage Students and Teachers</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mt-1 mr-4 w-6 h-6 bg-white rounded-full flex-shrink-0"></div>
+                        <span>Manage Timetable</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

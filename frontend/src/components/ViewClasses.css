@@ -1,0 +1,35 @@
+.view-class-page {
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .day-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  select, button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .class-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .class-table th, .class-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .class-table th {
+    background-color: #f0f0f0;
+  }
+  

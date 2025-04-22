@@ -1,0 +1,22 @@
+{
+    "welcome": "स्वागत है",
+    "SelectRoleDescription": "अपनी भूमिका चुनें",
+    "student": "छात्र",
+    "trackAttendance": "उपस्थिति ट्रैक करें",
+    "teacher": "शिक्षक",
+    "manageAttendance": "उपस्थिति प्रबंधित करें",
+    "Real-Time Analytics": "रीयल-टाइम एनालिटिक्स",
+    "trackAttendanceDesc": "उपस्थिति प्रवृत्तियों और कक्षा प्रदर्शन को तुरंत ट्रैक करें।",
+    "Smart Notifications": "स्मार्ट सूचनाएं",
+    "notificationsDesc": "ग़ैर-मौजूदगी या उपस्थिति लक्ष्यों के लिए स्वचालित अलर्ट प्राप्त करें।",
+    "Mobile Optimized": "मोबाइल के लिए अनुकूलित",
+    "mobileDesc": "AttendEase का उपयोग फोन और टैबलेट पर सुगमता से करें।",
+    "Key Features": "मुख्य विशेषताएँ",
+    "loginAsStudent": "छात्र के रूप में लॉगिन करें",
+    "studentId": "छात्र ID",
+    "password": "पासवर्ड",
+    "login": "लॉग इन",
+    "dontHaveAccount": "खाता नहीं है? साइनअप करें",
+    "forgotPassword": "पासवर्ड भूल गए?"
+  }
+  

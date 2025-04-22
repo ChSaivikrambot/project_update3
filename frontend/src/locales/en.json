@@ -1,0 +1,17 @@
+{
+    "welcome": "Welcome",
+    "SelectRoleDescription": "Choose your role",
+    "student": "Student",
+    "trackAttendance": "Track attendance",
+    "teacher": "Teacher",
+    "manageAttendance": "Manage attendance",
+    "SelectRoleDescription{Choose your role}": "Select your role",
+    "Real-Time Analytics": "Real-Time Analytics",
+    "trackAttendanceDesc": "Track attendance trends and class performance instantly.",
+    "Smart Notifications": "Smart Notifications",
+    "notificationsDesc": "Get alerted for absences or attendance targets automatically.",
+    "Mobile Optimized": "Mobile Optimized",
+    "mobileDesc": "Use AttendEase seamlessly across phones and tablets.",
+    "Key Features": "Key Features"
+  }
+  
