@@ -1,0 +1,82 @@
+# Git Daily-Life Cheat Sheet
+
+## PAGE 1 – COMMAND QUICK REFERENCE
+
+### 1. Start / Connect Repo
+```
+git init
+git branch -M main
+git remote add origin https://github.com/<USER>/<REPO>.git
+```
+
+### 2. Track & Save Changes
+```
+git status
+git add <file>
+git add .
+git commit -m "Message"
+```
+
+### 3. View History
+```
+git log
+git log --oneline
+git log --oneline --graph --all
+```
+
+### 4. Branching
+```
+git branch
+git branch feature/login
+git checkout -b feature/login
+git checkout main
+```
+
+### 5. Merge
+```
+git checkout main
+git merge feature/login
+```
+
+### 6. Push & Pull
+```
+git push -u origin main
+git pull
+```
+
+## PAGE 2 – EXAMPLE PROJECT WORKFLOWS
+
+### Scenario A – Local → GitHub
+```
+cd my-app
+git init
+git branch -M main
+git add .
+git commit -m "Initial setup"
+git remote add origin https://github.com/<USER>/my-app.git
+git push -u origin main
+```
+
+### Scenario B – Feature Branch
+```
+git checkout main
+git pull
+git checkout -b feature/profile-page
+git add .
+git commit -m "Add profile page"
+git push -u origin feature/profile-page
+git checkout main
+git pull
+git merge feature/profile-page
+git push
+```
+
+### Scenario C – Conflicts after GitHub Edit
+```
+git add .
+git commit -m "Local changes"
+git pull
+# Fix conflicts
+git add .
+git commit -m "Resolve conflicts"
+```
