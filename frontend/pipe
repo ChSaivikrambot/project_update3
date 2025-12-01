@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+    tools {
+        maven 'MAVEN_HOME'
+    }
+    stages {
+        stage('Git Clone & Clean') {
+            steps {
+                echo "=== Cleaning workspace and cloning repository ==="
+                // Remove old project folder if exists
+                bat 'rmdir /s /q maven-java || exit 0'
+                // Clone repo
+                bat 'git clone https://github.com/gsaisaatvik/maven-java.git'
+                // Clean Maven project
+                bat 'mvn clean -f maven-java/pom.xml'
+            }
+        }
+        stage('Install') {
+            steps {
+                echo "=== Installing dependencies ==="
+                bat 'mvn install -f maven-java/pom.xml -B'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "=== Running tests ==="
+                bat 'mvn test -f maven-java/pom.xml -B'
+            }
+        }
+        stage('Package') {
+            steps {
+                echo "=== Packaging application ==="
+                bat 'mvn package -f maven-java/pom.xml -B'
+            }
+        }
+        stage('Archive Artifact') {
+            steps {
+                echo "=== Archiving generated artifacts ==="
+                archiveArtifacts artifacts: 'maven-java/target/*.jar', fingerprint: true
+            }
+        }
+    }
+    post {
+        always {
+            echo "=== Pipeline finished ==="
+        }
+    }
+}
