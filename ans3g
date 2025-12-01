@@ -1,0 +1,158 @@
+# Collaborative Coding Using Git – Cheat Sheet
+
+## 1. GitHub Org + Repo Creation
+
+### Create Organization
+1. Go to **GitHub → Settings → Organizations → New Organization**
+2. Choose:
+   - Free / Team plan
+   - Organization name
+   - Email & verification
+
+### Create Repository Inside Organization
+```
+# On GitHub UI:
+Organization → New Repository
+```
+Options:
+- Public or Private
+- Add README (optional)
+- Add .gitignore (optional)
+
+Clone locally:
+```
+git clone https://github.com/<ORG>/<REPO>.git
+```
+
+---
+
+## 2. Adding Collaborators
+
+### Add Member to Organization
+1. Org → **People**  
+2. **Invite member**  
+3. Enter GitHub username  
+4. Assign role (Member recommended)
+
+### Add Collaborator to Repo
+1. Go to repository  
+2. **Settings → Collaborators**  
+3. Add people → Choose permission:
+   - Read
+   - Write
+   - Maintain
+   - Admin
+
+---
+
+## 3. Conflict Simulation (For Practice / Exam Demonstration)
+
+### Step A – Setup
+```
+git clone https://github.com/ORG/REPO.git
+cd REPO
+```
+
+### Step B – Person A edits file
+```
+echo "Line from A" >> demo.txt
+git add demo.txt
+git commit -m "A adds line"
+git push
+```
+
+### Step C – Person B edits same line *before pulling*
+```
+echo "Line from B" >> demo.txt
+git add demo.txt
+git commit -m "B adds line"
+git push      # This will FAIL
+```
+
+### Step D – Resolve Conflict
+```
+git pull      # brings A’s changes + conflict
+# Fix conflict in demo.txt manually
+git add demo.txt
+git commit -m "Resolve conflict A vs B"
+git push
+```
+
+---
+
+## 4. format-patch / apply (Email-Based Collaboration Simulation)
+
+### Generate Patch File from Commits
+Create patch for last commit:
+```
+git format-patch -1
+```
+
+Create patch for last 3 commits:
+```
+git format-patch -3
+```
+
+Output:  
+```
+0001-some-change.patch
+0002-fix-bug.patch
+...
+```
+
+### Apply Patch File
+```
+git apply 0001-some-change.patch
+```
+
+If patch applies with context:
+```
+git am 0001-some-change.patch
+```
+
+### Reverse Patch
+```
+git apply -R 0001-some-change.patch
+```
+
+---
+
+## 5. Example Workflow (Collaboration + Patch Workflow)
+
+### A) Developer A
+```
+echo "feature X" >> feature.txt
+git add .
+git commit -m "Implement feature X"
+git format-patch -1
+```
+Sends patch file to B (email, upload, etc.)
+
+### B) Developer B
+```
+git apply 0001-Implement-feature-X.patch
+git add .
+git commit -m "Apply patch from A"
+git push
+```
+
+---
+
+## 6. Quick Commands Index
+
+```
+git clone <url>
+git add .
+git commit -m "msg"
+git push
+git pull
+
+git branch
+git checkout -b feature
+git merge feature
+
+git format-patch -1
+git apply <patch>
+git am <patch>
+```
+
