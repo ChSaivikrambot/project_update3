@@ -1,0 +1,99 @@
+# Docker Daily-Life CLI Cheat Sheet
+
+## PAGE 1 – COMMAND QUICK REFERENCE
+
+### 1. Pull an Image
+```
+docker pull ubuntu
+docker pull nginx:latest
+```
+
+### 2. Run a Container
+```
+docker run ubuntu
+docker run -d nginx
+docker run -d -p 8080:80 nginx
+docker run -d -v myvol:/data nginx
+```
+
+### 3. Start / Stop / Restart
+```
+docker start <container-id>
+docker stop <container-id>
+docker restart <container-id>
+```
+
+### 4. Delete Containers & Images
+```
+docker rm <container-id>
+docker rm -f <container-id>
+docker rmi nginx
+docker rmi nginx:latest
+```
+
+### 5. Inspect
+```
+docker inspect <container-id>
+docker inspect <image-id>
+```
+
+### 6. Logs
+```
+docker logs <container-id>
+docker logs -f <container-id>
+```
+
+### 7. Exec
+```
+docker exec -it <container-id> bash
+docker exec -it <container-id> sh
+```
+
+### 8. Networks
+```
+docker network ls
+docker network inspect <network-name>
+```
+
+### 9. Volumes
+```
+docker volume create myvol
+docker volume ls
+docker volume inspect myvol
+```
+
+## PAGE 2 – EXAMPLE PROJECT WORKFLOWS
+
+### Scenario A – Start a Web Server
+```
+docker run -d -p 8080:80 --name web nginx
+docker logs web
+docker stop web
+docker rm web
+```
+
+### Scenario B – Debug Container
+```
+docker exec -it web bash
+exit
+```
+
+### Scenario C – Persistent Volume
+```
+docker volume create dbdata
+docker run -d -v dbdata:/var/lib/mysql --name mydb mysql:latest
+```
+
+### Scenario D – Clean Up All
+```
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -q)
+```
+
+### Scenario E – Inspect Networking
+```
+docker network ls
+docker inspect web
+```
